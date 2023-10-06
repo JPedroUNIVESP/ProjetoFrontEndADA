@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Churrascômetro</title>
+
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #titulo {
+            margin-top: 5%;
+            margin-left: 25%;
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+            width: 50%;
+            text-align: center;
+            align-items: center;
+        }
+
+        #titulo2 {
+            margin-left: 25%;
+            display: flex;
+            flex-direction: column;
+            height: 50%;
+            width: 50%;
+            text-align: center;
+            align-items: center;
+        }
+
+
+        #identificacao {
+            flex-direction: column;
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            align-items: center;
+        }
+
+        .input-container {
+        margin-bottom: 10px; 
+        }
+
+        .quadrado {
+        width: 200px; 
+        height: 200px; 
+        border-radius: 20px; 
+        border: 1px solid #000;
+        margin: 2.5%;
+        }
+
+        #dados{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        #pessoas-bebidas{
+            font-size: 18px;
+        }
+
+
+        
+        #calcular{
+
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            margin-left: 50%;
+        }
+
+        .container {
+            text-align: center; 
+        }
+
+        #calcular {
+            display: block; 
+            margin: 0 auto;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+
+    <div id = "titulo">
+        <h1>Churrascômetro</h1>
+    </div>
+
+    <div id = "identificacao">
+
+        <div class="input-container">
+            <input type="text" id="nome" placeholder="Nome" required>
+            <input type="email" id="email" placeholder="E-mail" required>
+            <input type="text" id="cep" placeholder="CEP" required>
+        </div>
+
+        <div class="input-container">
+            <label>
+                <input type="checkbox" id="promocoes" checked> Aceito receber e-mails com promoções
+            </label>
+            <button id="proximo">Ok</button>
+        </div>
+
+    </div>
+
+    <h2 id="titulo2">Informe a quantidade de adultos, crianças e pessoas que bebem</h2>
+
+    <div id= "dados">
+
+        <div id="adulto" class = "quadrado">
+            <h2>Adultos</h2>
+            <input type="number" id="adultos" name="adultos" min="0" max="100" step="1" value="0">
+            <h2 id="pessoas-bebidas"">Pessoas que bebem</h2>
+            <input type="number" id="pessoasBebem" name="pessoasBebem" min="0" max="100" step="1" value="0">
+
+        </div>
+
+        <div id="crianca" class = "quadrado">
+            <h2>Crianças</h2>
+            <input type="number" id="criancas" name="criancas" min="0" max="100" step="1" value="0">
+
+        </div>
+
+       
+    </div>
+
+    <div class="container">
+        <button id="calcular">Calcular</button>
+    </div>
+
+
+    <div class="container" id="resultado">
+
+    </div>
+
+</body>
+
+<script src="script.js"></script>
+</html>
